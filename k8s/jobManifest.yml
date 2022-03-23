@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rscs
+spec:
+  template:
+    spec:
+      containers:
+        - name: rscs
+          image: quay.io/jlehtimaki/rscs
+          env:
+            - name: ADMIN_CREDENTIALS
+              value: foo
+            - name: ROLES
+              value: bar
+      restartPolicy: Never
+  backoffLimit: 2
