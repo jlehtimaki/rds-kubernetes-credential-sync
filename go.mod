@@ -1,4 +1,4 @@
-module rds-kubernetes-credential-sync
+module rds-secretsmanager-credential-sync
 
 go 1.17
 
