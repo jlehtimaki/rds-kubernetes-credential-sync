@@ -37,7 +37,7 @@ func (r *RdsSync) initDatabase() {
 	var err error
 	psqlconn := fmt.Sprintf(
 		"host=%s port=%d user=%s password=%s dbname=%s sslmode=require",
-		"localhost",
+		r.adminCredentials.Host,
 		r.adminCredentials.Port,
 		r.adminCredentials.Username,
 		r.adminCredentials.Password,
