@@ -1,0 +1,18 @@
+---
+kind: pipeline
+type: kubernetes
+name: RDS Secretsmanager Credential Sync
+
+steps:
+  - name: Build
+    image: thegeeklab/drone-docker-buildx
+    pull: if-not-exists
+    settings:
+      username:
+        from_secret: username
+      password:
+        from_secret: password
+      platforms: linux/amd64,linux/arm64/v8
+      registry: "quay.io"
+      repo: "quay.io/jlehtimaki/rscs"
+      tags: ${DRONE_COMMIT_SHA}
