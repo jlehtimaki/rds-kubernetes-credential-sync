@@ -1,5 +1,5 @@
 # rds-secretsmanager-credential-sync (in short RSCS)
-
+[![Build Status](https://drone.lehtux.com/api/badges/jlehtimaki/rds-secretsmanager-credential-sync/status.svg)](https://drone.lehtux.com/jlehtimaki/rds-secretsmanager-credential-sync) \
 This projects goal is to sync users and create databases in secretsmanager (RDS format) to RDS instance. \
 This is mainly targeted to run as a Kubernetes job but of course you can run it, however. \
 

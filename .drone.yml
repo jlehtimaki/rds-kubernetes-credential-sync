@@ -5,7 +5,7 @@ name: RDS Secretsmanager Credential Sync
 
 steps:
   - name: Build
-    image: thegeeklab/drone-docker-buildx
+    image: thegeeklab/drone-docker-buildx:20.11.3
     pull: if-not-exists
     settings:
       username:
