@@ -230,7 +230,7 @@ func main() {
 
 	// Iterate through currentRoles and check if there is some role that should not be there
 	for _, role := range rdsSync.currentRoles {
-		if role == "rdsadmin" {
+		if role == "rdsadmin" || role == rdsSync.adminCredentials.Username {
 			continue
 		}
 		if !contains(rolesList, role) {
